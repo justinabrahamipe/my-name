@@ -26,7 +26,10 @@ jobs:
       - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
-      - name: run the app
-        run:  node main.js
+      - name: Deploy the app
+        run:  |
+          cp -r ~/actions-runner/_work/my-name/* ~/my-name/
+          npm install
+          sudo systemctl restart myname
 
 
