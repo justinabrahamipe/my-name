@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Deploy the app
         run:  |
-          cp -r ~/actions-runner/_work/my-name/* ~/my-name/
+          cp -r ~/actions-runner/_work/my-name/* ~/my-name
           npm install
           sudo systemctl restart myname
 
